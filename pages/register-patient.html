@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Paciente</title>
+    <link rel="stylesheet" href="../styles/register-patient.css">
+</head>
+<body>
+    <section>
+        <form action="./pages/new-consult.html">
+            <label for="namePatient">Nome completo:</label>
+            <input type="text" name="namePatient" placeholder="Nome" required>
+
+            <label for="cpfPatient">CPF:</label>
+            <input type="text" name="namePatient" placeholder="CPF" required>
+
+            <label for="date">Data de nascimento:</label>
+            <input type="date" name="date"required>
+
+            <label for="nameMother">Nome da mãe:</label>
+            <input type="text" name="nameMother" placeholder="Nome" required>
+
+            <button type="submit" class="button-access" onsubmit="validateFields()">Cadastrar</button>
+        </form>
+    </section>
+</body>
+</html>
