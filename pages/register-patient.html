@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +7,27 @@
     <link rel="stylesheet" href="../styles/register-patient.css">
 </head>
 <body>
-    <section>
-        <form action="./pages/new-consult.html">
-            <label for="namePatient">Nome completo:</label>
-            <input type="text" name="namePatient" placeholder="Nome" required>
+    <div class="container">
+        <h2>Cadastrar Paciente</h2>
+        <section>
+            <form action="./pages/new-consult.html" id="register-form">
+                <label for="namePatient">Nome completo:</label>
+                <input type="text" name="namePatient" id="namePatient" placeholder="Nome" required>
 
-            <label for="cpfPatient">CPF:</label>
-            <input type="text" name="namePatient" placeholder="CPF" required>
+                <label for="cpfPatient">CPF:</label>
+                <input type="text" name="cpfPatient" id="cpfPatient" placeholder="xxx.xxx.xxx-xx" maxlength="14" oninput="mascaraCPF(this)" required>
 
-            <label for="date">Data de nascimento:</label>
-            <input type="date" name="date"required>
+                <label for="date">Data de nascimento:</label>
+                <input type="date" name="date" id="date" required>
 
-            <label for="nameMother">Nome da mãe:</label>
-            <input type="text" name="nameMother" placeholder="Nome" required>
+                <label for="nameMother">Nome da mãe:</label>
+                <input type="text" name="nameMother" id="nameMother" placeholder="Nome" required>
 
-            <button type="submit" class="button-access" onsubmit="validateFields()">Cadastrar</button>
-        </form>
-    </section>
+                <button type="submit" class="button-access">Cadastrar</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="../scripts/mask.js"></script>
 </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica - Cadastro de Consulta</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/cadastro-consult.css">
+</head>
+<body>
+    <div class="container">
+        <header class="my-4">
+            <h2>Cadastro de Consulta</h2>
+        </header>
+
+        <form id="consultForm">
+            <div class="mb-3">
+                <label for="patientName" class="form-label">Nome do Paciente</label>
+                <input type="text" id="patientName" class="form-control" placeholder="Digite o nome completo do paciente" required>
+            </div>
+            <div class="mb-3">
+                <label for="patientCpf" class="form-label">CPF (opcional)</label>
+                <input type="text" id="patientCpf" class="form-control" placeholder="xxx.xxx.xxx-xx" maxlength="14">
+            </div>
+            <div class="mb-3">
+                <label for="consultDate" class="form-label">Data da Consulta</label>
+                <input type="date" id="consultDate" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="patientDob" class="form-label">Data de Nascimento do Paciente</label>
+                <input type="date" id="patientDob" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="consultReason" class="form-label">Motivo da Consulta</label>
+                <textarea id="consultReason" class="form-control" rows="4" placeholder="Digite o motivo da consulta aqui" required></textarea>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-success">Enviar</button>
+                <a href="med-area.html" class="btn btn-secondary">Voltar para a Área do Médico</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="../scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

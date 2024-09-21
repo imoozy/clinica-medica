@@ -4,21 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Consulta</title>
+    <link rel="stylesheet" href="../styles/new-consult.css">
 </head>
 <body>
-    <section>
-        <div>
-            <p>Paciente</p>
-            <p>CPF</p>
-            <p>Idade</p>
-            <p>Nome da Mãe</p>
-        </div>
-        <div>
-            <form action="">
-                <label for=""></label>
-                <input type="text">
+    <div class="container">
+        <h2>Nova Consulta</h2>
+
+        <section class="patient-info">
+            <div class="info">
+                <p><strong>Paciente:</strong> João da Silva</p>
+                <p><strong>CPF:</strong> 123.456.789-10</p>
+                <p><strong>Idade:</strong> 45</p>
+                <p><strong>Nome da Mãe:</strong> Maria da Silva</p>
+            </div>
+        </section>
+
+        <section class="consult-form">
+            <form action="" id="consult-form">
+                <label for="symptoms">Sintomas:</label>
+                <textarea id="symptoms" name="symptoms" rows="3" placeholder="Descreva os sintomas..." required></textarea>
+
+                <label for="diagnosis">Diagnóstico:</label>
+                <textarea id="diagnosis" name="diagnosis" rows="3" placeholder="Descreva o diagnóstico..." required></textarea>
+
+                <label for="prescription">Prescrição:</label>
+                <textarea id="prescription" name="prescription" rows="3" placeholder="Prescreva o tratamento ou medicamento..." required></textarea>
+
+                <!-- Novo layout com campos pequenos organizados em uma linha -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pressure">Pressão arterial:</label>
+                        <input type="text" id="pressure" name="pressure" placeholder="Ex: 120/80 mmHg" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="glucose">Glicemia:</label>
+                        <input type="text" id="glucose" name="glucose" placeholder="Ex: 90 mg/dL" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cid">CID:</label>
+                        <input type="text" id="cid" name="cid" placeholder="Código CID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consult-time">Duração (min):</label>
+                        <input type="number" id="consult-time" name="consult-time" placeholder="Ex: 30" required>
+                    </div>
+                </div>
+
+                <label for="anamnesis">Anamnese:</label>
+                <textarea id="anamnesis" name="anamnesis" rows="3" placeholder="Descreva a anamnese..." required></textarea>
+
+                <label for="medication">Medicação prescrita:</label>
+                <textarea id="medication" name="medication" rows="3" placeholder="Descreva a medicação prescrita..." required></textarea>
+
+                <div class="buttons">
+                    <button type="submit" class="button-access">Salvar Consulta</button>
+                    <button type="reset" class="button-clear">Limpar Campos</button>
+                </div>
             </form>
-        </div>
-    </section>
+        </section>
+    </div>
 </body>
 </html>

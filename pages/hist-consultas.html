@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Consultas</title>
+    <link rel="stylesheet" href="../styles/hist-consultas.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Histórico de Consultas</h2>
+        <section class="consult-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Sintomas</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12/09/2024</td>
+                        <td>Dor de cabeça, febre</td>
+                        <td><button class="view-button" onclick="openPopup('consulta1')">Ver</button></td>
+                    </tr>
+                    <tr>
+                        <td>02/09/2024</td>
+                        <td>Cansaço, tosse seca</td>
+                        <td><button class="view-button" onclick="openPopup('consulta2')">Ver</button></td>
+                    </tr>
+                    <tr>
+                        <td>20/08/2024</td>
+                        <td>Dor abdominal, náusea</td>
+                        <td><button class="view-button" onclick="openPopup('consulta3')">Ver</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <!-- Popup para exibir detalhes da consulta -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" onclick="closePopup()">&times;</span>
+            <div id="popup-details"></div>
+        </div>
+    </div>
+
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
